@@ -1,0 +1,151 @@
+/* Seção Principal */
+.proposta-valor-section {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; /* Ocupa toda a altura */
+  background: #ffffff;
+  height: 120vh; /* Altura aumentada para mais espaço */
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Container */
+.proposta-valor-container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  gap: 20px;
+  align-items: stretch;
+}
+
+/* Imagem */
+.proposta-valor-imagem {
+  flex: 1;
+  height: 100%; /* Ocupa toda a altura aumentada */
+  overflow: hidden;
+}
+
+.proposta-valor-imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Garante que a imagem preencha */
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+.proposta-valor-imagem img:hover {
+  transform: scale(1.05); /* Zoom suave no hover */
+}
+
+/* Conteúdo */
+.proposta-valor-conteudo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+}
+
+.proposta-valor-titulo {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #1976d2;
+  margin-bottom: 20px;
+  animation: slideUp 1s ease-out;
+}
+
+.proposta-valor-intro {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  animation: fadeIn 1s ease-out 0.3s;
+}
+
+/* Blocos Numerados */
+.proposta-valor-bloco {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.proposta-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  animation: fadeIn 1s ease-out 0.5s;
+  transition: transform 0.3s ease;
+}
+
+.proposta-item:hover {
+  transform: translateX(10px); /* Deslocamento leve no hover */
+}
+
+.proposta-numero {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffc107;
+  background: #fff8e1;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slideUp 1s ease-out 0.6s;
+}
+
+.proposta-texto h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #1976d2;
+}
+
+.proposta-texto p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .proposta-valor-section {
+    height: auto; /* Altura dinâmica em telas menores */
+  }
+
+  .proposta-valor-container {
+    flex-direction: column;
+  }
+
+  .proposta-valor-imagem img {
+    height: 300px; /* Altura controlada */
+  }
+
+  .proposta-valor-conteudo {
+    padding: 20px;
+  }
+}

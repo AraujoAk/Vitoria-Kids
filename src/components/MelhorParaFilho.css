@@ -1,0 +1,101 @@
+/* Seção Principal */
+.melhor-filho-section {
+    padding: 80px 20px;
+    background: linear-gradient(to bottom, #ffffff, #e3f2fd); /* Fundo degradê sutil */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Container */
+  .melhor-filho-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    z-index: 2;
+  }
+  
+  /* Título */
+  .melhor-filho-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #1976d2; /* Azul principal */
+    margin-bottom: 20px;
+    font-family: "Poppins", sans-serif;
+    position: relative;
+  }
+  
+  .melhor-filho-title span {
+    color: #ffc107; /* Amarelo destaque */
+    font-style: italic;
+  }
+  
+  /* Texto */
+  .melhor-filho-text {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 40px;
+    font-family: "Poppins", sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* Destaques Interativos */
+  .melhor-filho-highlights {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .highlight-card {
+    background: #fff;
+    color: #1976d2;
+    font-weight: bold;
+    padding: 20px;
+    border: 2px solid #ffc107;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .highlight-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    background: #ffc107; /* Muda o fundo no hover */
+    color: #ffffff; /* Texto branco */
+  }
+  
+  /* Efeitos de Fundo Decorativos */
+  .melhor-filho-section::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(25, 118, 210, 0.1); /* Azul translúcido */
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  .melhor-filho-section::after {
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 193, 7, 0.1); /* Amarelo translúcido */
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .melhor-filho-highlights {
+      grid-template-columns: 1fr;
+    }
+  
+    .melhor-filho-title {
+      font-size: 2.2rem;
+    }
+  }
+  

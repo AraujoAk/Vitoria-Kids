@@ -1,0 +1,90 @@
+/* Hero Section */
+.hero {
+    padding-top: calc(35px + 60px); /* Espaço para o Header */
+    background-color: #f4f4f4; /* Fundo claro */
+    position: relative;
+    text-align: center;
+  }
+  
+  /* Swiper Container */
+  .hero-swiper {
+    width: 100%;
+    height: 600px; /* Altura padrão para desktops */
+  }
+  
+  @media (max-width: 1024px) {
+    .hero-swiper {
+      height: 500px; /* Altura ajustada para tablets */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero-swiper {
+      height: 400px; /* Altura ajustada para smartphones */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero-swiper {
+      height: 300px; /* Altura ajustada para dispositivos pequenos */
+    }
+  }
+  
+  /* Slide */
+  .hero-slide {
+    position: relative;
+    color: #ffffff; /* Texto branco */
+  }
+  
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta a imagem ao espaço */
+  }
+  
+  /* Texto Responsivo */
+  .hero-text {
+    position: absolute;
+    bottom: 15%; /* Ajusta a posição do texto */
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.4); /* Fundo semi-transparente */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.5rem; /* Tamanho padrão do texto */
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  }
+  
+  @media (max-width: 768px) {
+    .hero-text {
+      font-size: 1.2rem; /* Reduz o tamanho do texto */
+      padding: 8px 15px; /* Ajusta o preenchimento */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero-text {
+      font-size: 1rem; /* Texto menor em telas pequenas */
+      padding: 5px 10px;
+    }
+  }
+  
+  /* Posição e Estilo dos Pontos */
+  .swiper-pagination-bullet {
+    background: #ffffff; /* Cor dos pontos */
+    opacity: 0.7;
+  }
+  
+  .swiper-pagination-bullet-active {
+    background: #ffc107; /* Cor do ponto ativo */
+    opacity: 1;
+  }
+  
+  @media (max-width: 768px) {
+    .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px; /* Reduz o tamanho dos pontos */
+    }
+  }  

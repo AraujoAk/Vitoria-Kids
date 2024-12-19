@@ -1,0 +1,149 @@
+/* Seção Principal */
+.nossa-equipe-section {
+    padding: 40px 20px;
+    background-color: #f4f4f4; /* Cinza claro neutro */
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Faixas Dinâmicas */
+  .nossa-equipe-section::before,
+  .nossa-equipe-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: #e3f2fd; /* Azul claro */
+    transform: skewY(-5deg);
+    z-index: 0;
+  }
+  
+  .nossa-equipe-section::after {
+    top: auto;
+    bottom: 0;
+    height: 30%;
+    background: #ffc107; /* Amarelo suave */
+    transform: skewY(5deg);
+  }
+  
+  /* Título da seção */
+  .nossa-equipe-title {
+    font-size: 3rem; /* Tamanho maior */
+    font-weight: 700; /* Peso da fonte mais grosso */
+    color: #1976d2; /* Azul principal */
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 2;
+    text-transform: uppercase; /* Caixa alta */
+    letter-spacing: 2px; /* Espaçamento entre letras */
+  }
+  
+  /* Linha decorativa abaixo do título */
+  .nossa-equipe-title::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 5px;
+    background-color: #ffc107; /* Amarelo destaque */
+    margin: 10px auto;
+    border-radius: 5px; /* Bordas arredondadas */
+  }
+  
+  /* Swiper */
+  .nossa-equipe-swiper {
+    position: relative;
+    z-index: 1;
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  /* Cartão */
+  .team-card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s ease;
+  }
+  
+  .team-card:hover {
+    transform: translateY(0px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Imagem */
+  .team-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ffc107; /* Borda amarela */
+    margin-bottom: 10px;
+  }
+  
+  /* Detalhes */
+  .team-details {
+    text-align: center;
+  }
+  
+  .team-name {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #1976d2;
+  }
+  
+  .team-role {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+/* Ajustando para telas menores */
+@media (max-width: 1024px) {
+  .nossa-equipe-swiper {
+    width: 100%;
+  }
+
+  .team-card {
+    padding: 15px;
+  }
+
+  .team-image {
+    width: 90px;
+    height: 90px;
+  }
+
+  .team-name {
+    font-size: 1.1rem;
+  }
+
+  .team-role {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nossa-equipe-swiper {
+    width: 100%;
+  }
+
+  .team-card {
+    padding: 10px;
+  }
+
+  .team-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .team-name {
+    font-size: 1rem;
+  }
+
+  .team-role {
+    font-size: 0.8rem;
+  }
+}

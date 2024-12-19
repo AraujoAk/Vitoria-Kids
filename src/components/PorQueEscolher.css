@@ -1,0 +1,148 @@
+/* Seção principal */
+.por-que-escolher {
+    padding: 50px 20px;
+    background: linear-gradient(to bottom right, #f9f9f9, #e3f2fd);
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  /* Elementos decorativos */
+  .por-que-escolher::before,
+  .por-que-escolher::after {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: rgba(255, 193, 7, 0.3);
+    border-radius: 50%;
+    z-index: 0;
+  }
+  
+  .por-que-escolher::before {
+    top: -50px;
+    left: -50px;
+  }
+  
+  .por-que-escolher::after {
+    bottom: -50px;
+    right: -50px;
+  }
+  
+  /* Layout principal */
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Coluna de Texto */
+  .text-column {
+    flex: 1;
+    text-align: left;
+    animation: fadeInUp 1.2s ease-in-out; /* Animação de entrada */
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    color: #1976d2;
+    margin-bottom: 20px;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Sublinhado animado */
+  .section-title::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 4px;
+    background-color: #ffc107; /* Amarelo destaque */
+    bottom: 0;
+    left: 0;
+    transition: width 0.4s ease-in-out;
+  }
+  
+  .section-title:hover::after {
+    width: 100%;
+  }
+  
+  /* Efeito hover no título */
+  .section-title:hover {
+    color: #d32f2f; /* Muda a cor do título no hover */
+    transform: translateY(-5px); /* Leve elevação */
+  }
+  
+ /* Parágrafos normais */
+.section-description {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    transition: color 0.3s ease; /* Apenas uma transição sutil de cor */
+  }
+  
+  /* Destaque nos parágrafos */
+  .section-highlight {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #d32f2f; /* Vermelho padrão */
+    transition: color 0.3s ease; /* Apenas mudança de cor */
+  }
+  
+  .section-highlight:hover {
+    color: #ffc107; /* Amarelo destaque no hover */
+  }
+  
+  
+  /* Coluna do Vídeo */
+  .video-column {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .video-frame {
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Animação de entrada fade-up */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .text-column {
+      text-align: center;
+    }
+  
+    .video-frame {
+      height: 200px;
+    }
+  }  

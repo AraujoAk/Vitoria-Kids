@@ -1,0 +1,178 @@
+/* Top Header */
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 30px;
+  height: 35px;
+  background: #e3f2fd; /* Azul claro */
+  color: #1976d2;
+  font-size: 0.85rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Sempre acima do Header principal */
+  transition: transform 0.3s ease; /* Suaviza a transição de esconder */
+}
+
+.top-header.hidden {
+  transform: translateY(-100%); /* Move o Top Header para fora da tela */
+}
+
+/* Estilo dos itens do Top Header */
+.top-header-left span {
+  margin-left: 5px;
+  margin-right: 15px;
+  color: #1976d2; /* Azul escuro */
+}
+
+.top-header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Espaçamento entre os itens */
+}
+
+.top-header-right a {
+  color: #1976d2; /* Azul escuro */
+  text-decoration: none;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Espaço entre o ícone e o texto */
+  transition: color 0.3s ease;
+}
+
+.top-header-right a:hover {
+  color: #d32f2f; /* Vermelho no hover */
+}
+
+/* Header principal */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: linear-gradient(to right, #1976d2, #42a5f5); /* Fundo gradiente */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  position: fixed;
+  top: 35px; /* Exatamente abaixo do Top Header */
+  width: 100%;
+  z-index: 999; /* Abaixo do Top Header */
+  transition: top 0.3s ease, padding 0.3s ease; /* Suaviza o reposicionamento */
+}
+
+.header.expanded {
+  top: 0; /* Move o Header para o topo */
+  padding: 10px 30px; /* Reduz o padding */
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); /* Sombra mais acentuada */
+}
+
+/* Estilo da Logo */
+.header-logo a {
+  text-decoration: none; /* Remove o sublinhado */
+  color: #ffffff; /* Cor branca padrão */
+  font-weight: bold;
+  font-size: 1.8rem;
+  transition: transform 0.3s ease, color 0.3s ease; /* Transição suave */
+}
+
+.header-logo a:hover {
+  transform: scale(1.1); /* Leve aumento no tamanho */
+  color: #ffc107; /* Amarelo no hover */
+}
+
+/* Navegação */
+.header-nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Espaçamento entre os itens */
+}
+
+.header-nav-links a {
+  text-decoration: none;
+  color: #ffffff; /* Branco */
+  font-weight: 500;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.header-nav-links a:hover {
+  color: #ffc107; /* Amarelo no hover */
+  border-bottom: 2px solid #ffc107; /* Linha amarela no hover */
+}
+
+.header-icon {
+  margin-right: 8px; /* Espaço entre o ícone e o texto */
+  font-size: 1rem; /* Tamanho do ícone */
+  color: #ffffff; /* Branco */
+  transition: color 0.3s ease;
+}
+
+/* Hover nos ícones */
+.header-nav-links a:hover .header-icon {
+  color: #ffc107; /* Ícone amarelo no hover */
+}
+
+/* Botão "Agenda uma Visita" */
+.header-button {
+  display: flex;
+  align-items: center; /* Alinha o ícone com o texto */
+  text-decoration: none;
+  color: #d32f2f; /* Vermelho */
+  font-weight: bold;
+  font-size: 0.9rem;
+  gap: 8px; /* Espaço entre o ícone e o texto */
+  padding: 5px; /* Ajusta o espaçamento interno para combinar com os links */
+  transition: color 0.3s ease, transform 0.2s ease; /* Transições para efeitos */
+}
+
+.header-button:hover {
+  background-color: rgba(211, 47, 47, 0.1); /* Fundo vermelho claro translúcido */
+  border-radius: 5px; /* Bordas suaves */
+  transform: translateY(-2px); /* Elevação */
+}
+
+.header-button:active {
+  transform: translateY(1px); /* Simula o botão sendo pressionado */
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra interna */
+}
+
+/* Menu Hambúrguer */
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .header-nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #ffffff;
+    width: 100%;
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .header-nav-links.open {
+    display: flex;
+  }
+
+  .header-nav-links a {
+    color: #1976d2; /* Azul escuro */
+  }
+
+  .header-nav-links a:hover {
+    color: #d32f2f; /* Vermelho no hover */
+  }
+}
