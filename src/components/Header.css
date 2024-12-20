@@ -1,52 +1,4 @@
-/* Top Header */
-.top-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5px 30px;
-  height: 35px;
-  background: #e3f2fd; /* Azul claro */
-  color: #1976d2;
-  font-size: 0.85rem;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000; /* Sempre acima do Header principal */
-  transition: transform 0.3s ease; /* Suaviza a transição de esconder */
-}
 
-.top-header.hidden {
-  transform: translateY(-100%); /* Move o Top Header para fora da tela */
-}
-
-/* Estilo dos itens do Top Header */
-.top-header-left span {
-  margin-left: 5px;
-  margin-right: 15px;
-  color: #1976d2; /* Azul escuro */
-}
-
-.top-header-right {
-  display: flex;
-  align-items: center;
-  gap: 20px; /* Espaçamento entre os itens */
-}
-
-.top-header-right a {
-  color: #1976d2; /* Azul escuro */
-  text-decoration: none;
-  font-size: 0.85rem;
-  display: flex;
-  align-items: center;
-  gap: 5px; /* Espaço entre o ícone e o texto */
-  transition: color 0.3s ease;
-}
-
-.top-header-right a:hover {
-  color: #d32f2f; /* Vermelho no hover */
-}
-
-/* Header principal */
 .header {
   display: flex;
   justify-content: space-between;
@@ -55,10 +7,20 @@
   background: linear-gradient(to right, #1976d2, #42a5f5); /* Fundo gradiente */
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
   position: fixed;
-  top: 35px; /* Exatamente abaixo do Top Header */
+  top: 0; /* Fixa o Header no topo */
   width: 100%;
-  z-index: 999; /* Abaixo do Top Header */
+  z-index: 999; /* Mantém acima de outros elementos */
   transition: top 0.3s ease, padding 0.3s ease; /* Suaviza o reposicionamento */
+}
+
+.header + .hero {
+  margin-top: 0; /* Remove o espaço entre o header e o hero */
+  padding-top: 75px; /* Adiciona espaço para o conteúdo não sobrepor o header */
+}
+
+.hero {
+  margin: 0; /* Remove qualquer margem no hero */
+  padding: 0; /* Remove padding adicional */
 }
 
 .header.expanded {
@@ -145,34 +107,189 @@
   cursor: pointer;
 }
 
-/* Responsividade */
+.menu-close {
+  display: none;
+}
+
+/* Estilo Mobile */
 @media (max-width: 768px) {
+
+  .header-nav-links.open .menu-close {
+    display: block; /* Mostra o botão apenas quando o menu está aberto */
+  }
+  /* Header no Mobile */
+  .header {
+    justify-content: center;
+    align-items: center; /* Garante que os itens fiquem alinhados verticalmente */
+    min-height: 60px; /* Define uma altura mínima para o header */
+    padding: 10px 20px; /* Adiciona espaçamento interno */
+    top: 0; /* Fixado no topo */
+    width: 100%;
+    background: linear-gradient(to right, #1976d2, #42a5f5); /* Fundo gradiente */
+    z-index: 999; /* Fica acima dos outros elementos */
+  }
+
+  /* Ajuste de Espaçamento no Hero */
+  .header + .hero {
+    margin-top: 0; /* Remove o espaço no mobile */
+    padding-top: 60px; /* Ajusta o espaço para o header menor */
+  }
+
+  /* Centralizar a Logo no Mobile */
+  .header-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Ícone do Menu na Lateral Esquerda */
   .menu-icon {
     display: block;
-  }
-
-  .header-nav-links {
-    display: none;
-    flex-direction: column;
-    gap: 10px;
     position: absolute;
-    top: 100%;
-    left: 0;
-    background: #ffffff;
-    width: 100%;
-    padding: 10px 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    left: 20px; /* Move o ícone para a lateral esquerda */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.8rem; /* Ajusta o tamanho do ícone */
+    color: #ffffff;
   }
 
-  .header-nav-links.open {
+  /* Menu Lateral com Transição Suave */
+  .header-nav-links {
     display: flex;
+    flex-direction: column; /* Links em coluna */
+    align-items: flex-start; /* Alinha os links à esquerda */
+    gap: 0; /* Remove espaçamento extra entre os links */
+    position: fixed;
+    top: 0; /* Fixa o menu no topo */
+    left: 0;
+    background: #ffffff; /* Fundo branco */
+    width: 75%; /* Menu ocupa 75% da tela */
+    height: 100%; /* Menu ocupa toda a altura */
+    padding: 20px; /* Espaçamento interno */
+    box-shadow: 2px 0 6px rgba(0, 0, 0, 0.2); /* Sombra */
+    transform: translateX(-100%); /* Esconde o menu à esquerda */
+    opacity: 0; /* Invisível inicialmente */
+    pointer-events: none; /* Não interativo inicialmente */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Suaviza a transição */
+    z-index: 1000;
+  }
+  
+  /* Menu Aberto */
+  .header-nav-links.open {
+    transform: translateX(0); /* Mostra o menu */
+    opacity: 1; /* Torna visível */
+    pointer-events: all; /* Torna interativo */
+  }
+
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fundo escuro semi-transparente */
+    z-index: 999; /* Fica abaixo do menu */
+    opacity: 0; /* Invisível inicialmente */
+    pointer-events: none; /* Não interativo inicialmente */
+    transition: opacity 0.3s ease;
+  }
+  
+  .menu-overlay.open {
+    opacity: 1; /* Torna visível */
+    pointer-events: all; /* Torna interativo */
   }
 
   .header-nav-links a {
     color: #1976d2; /* Azul escuro */
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: flex; /* Para alinhar ícone e texto */
+    align-items: center;
+    gap: 10px; /* Espaço entre ícone e texto */
   }
 
   .header-nav-links a:hover {
     color: #d32f2f; /* Vermelho no hover */
+  }
+
+  /* Ícones nos Links */
+  .header-icon {
+    font-size: 1.4rem; /* Ajusta o tamanho do ícone */
+    color: #1976d2; /* Cor azul para os ícones */
+    transition: color 0.3s ease;
+  }
+
+  .header-nav-links a:hover .header-icon {
+    color: #d32f2f; /* Ícones vermelhos no hover */
+  }
+
+  /* Botão de Fechar no Menu */
+  .menu-close {
+    border-bottom: none;
+    position: absolute;
+    top: 5px;       
+    left: 300px;              
+    background: none;
+    border: none;
+    font-size: 1.8rem; /* Tamanho do ícone */
+    color: #1976d2; /* Azul padrão */
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease; /* Efeito no hover */
+  }
+  
+  .menu-close:hover {
+    color: #d32f2f; /* Vermelho no hover */
+    transform: scale(1.0) /* Leve aumento no hover */
+  }
+  
+  .menu-close button {
+    background: none;
+    border: none;
+    font-size: 1.8rem; /* Tamanho do ícone */
+    color: #1976d2; /* Azul padrão */
+    cursor: pointer;
+    
+  }
+  
+  .menu-close button:hover {
+    color: #d32f2f; /* Vermelho no hover */
+    transform: scale(1.0) /* Leve aumento no hover */
+  }
+
+  /* Divisórias entre os Links */
+  .header-nav-links li {
+    border-top: none;
+    width: 100%; /* Divisória ocupa toda a largura */
+    border-bottom: 1px solid #e0e0e0; /* Linha cinza clara */
+  }
+
+  .header-nav-links li.menu-close {
+    border-bottom: none; /* Remove a linha do botão de fechar */
+  }
+
+  .header-nav-links li a {
+    display: flex; /* Alinha ícones e texto horizontalmente */
+    align-items: center; /* Alinha verticalmente */
+    gap: 10px; /* Espaço entre ícone e texto */
+    padding: 15px 0; /* Espaçamento vertical */
+    color: #1976d2; /* Azul escuro */
+    text-decoration: none;
+    font-size: 1.2rem; /* Tamanho do texto */
+  }
+
+  .header-nav-links li a:hover {
+    color: #d32f2f; /* Vermelho no hover */
+  }
+}
+@media (min-width: 769px) {
+  /* Hero no Desktop */
+  .header + .hero {
+    margin-top: 0; /* Remove o espaço no desktop */
+    padding-top: 75px; /* Compensa a altura do header fixo */
+  }
+
+  .hero {
+    margin: 0; /* Remove qualquer margem no desktop */
+    padding: 0; /* Remove padding adicional */
   }
 }

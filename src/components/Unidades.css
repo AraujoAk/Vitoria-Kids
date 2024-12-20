@@ -141,3 +141,70 @@
     color: #555;
   }
   
+  /* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+  /* Seção Principal */
+  .unidades-section {
+    padding: 50px 10px; /* Reduz o espaçamento para caber melhor em telas pequenas */
+    text-align: center;
+  }
+
+  /* Título */
+  .unidades-title {
+    font-size: 2rem; /* Reduz o tamanho do título */
+    margin-bottom: 20px;
+  }
+
+  .unidades-title::after {
+    width: 80px; /* Ajusta a linha decorativa abaixo do título */
+    height: 4px;
+  }
+
+  /* Container de Cards */
+  .unidades-container {
+    flex-direction: column; /* Empilha os cards verticalmente */
+    gap: 20px; /* Reduz o espaçamento entre os cards */
+  }
+
+  /* Cards */
+  .unidade-card {
+    width: 90%; /* Faz com que os cards ocupem quase toda a largura */
+    margin: 0 auto; /* Centraliza os cards */
+    padding: 15px; /* Reduz o espaçamento interno */
+  }
+
+  .unidade-card:hover {
+    transform: none; /* Remove o efeito de hover em telas pequenas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra mais leve */
+  }
+
+  /* Imagem */
+  .unidade-image {
+    height: 120px; /* Reduz a altura da imagem */
+    margin-bottom: 10px;
+  }
+
+  /* Texto */
+  .unidade-name {
+    font-size: 1rem; /* Reduz o tamanho da fonte do nome */
+  }
+
+  .unidade-description {
+    font-size: 0.8rem; /* Reduz o tamanho da descrição */
+  }
+
+  /* Elementos decorativos extras */
+  .unidades-decor.circle1 {
+    width: 100px;
+    height: 100px;
+    top: 5%;
+    left: 5%;
+  }
+
+  .unidades-decor.circle2 {
+    width: 80px;
+    height: 80px;
+    bottom: 10%;
+    right: 10%;
+  }
+}

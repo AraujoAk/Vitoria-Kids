@@ -6,10 +6,6 @@ import {
   FaBlog,
   FaCalendarCheck,
   FaHandHoldingHeart,
-  FaPhoneAlt,
-  FaEnvelope,
-  FaFacebook,
-  FaInstagram,
   FaBars,
   FaTimes,
 } from "react-icons/fa";
@@ -24,9 +20,9 @@ const Header = () => {
 
     const handleScroll = () => {
       if (window.scrollY > lastScrollY) {
-        setHideTopHeader(true); // Esconde o Top Header ao rolar para baixo
+        setHideTopHeader(true); // Esconde o Header ao rolar para baixo
       } else {
-        setHideTopHeader(false); // Mostra o Top Header ao rolar para cima
+        setHideTopHeader(false); // Mostra o Header ao rolar para cima
       }
       lastScrollY = window.scrollY;
     };
@@ -41,31 +37,14 @@ const Header = () => {
     setMenuOpen((prev) => !prev); // Alterna o estado do menu
   };
 
+  const closeMenu = () => {
+    setMenuOpen(false); // Fecha o menu
+  };
+
   return (
     <>
-      {/* Top Header */}
-      <div className={`top-header ${hideTopHeader ? "hidden" : ""}`}>
-        <div className="top-header-left">
-          <FaPhoneAlt /> <span>(84) 9999-9999</span>
-          <FaEnvelope /> <span>contato@vitoriakids.com</span>
-        </div>
-        <div className="top-header-right">
-          <a
-            href="https://facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaFacebook /> Facebook
-          </a>
-          <a
-            href="https://instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaInstagram /> Instagram
-          </a>
-        </div>
-      </div>
+      {/* Sobreposição do Menu */}
+      {menuOpen && <div className="menu-overlay" onClick={closeMenu}></div>}
 
       {/* Main Header */}
       <header className={`header ${hideTopHeader ? "expanded" : ""}`}>
@@ -77,17 +56,24 @@ const Header = () => {
 
         {/* Ícone do Menu para telas pequenas */}
         <div className="menu-icon" onClick={toggleMenu}>
-          {menuOpen ? <FaTimes /> : <FaBars />}
+          <FaBars />
         </div>
 
-        {/* Links de Navegação */}
+        {/* Links de Navegação - Barra Lateral */}
         <ul className={`header-nav-links ${menuOpen ? "open" : ""}`}>
+          {/* Botão de Fechar no topo direito */}
+          <li className="menu-close">
+            <button onClick={closeMenu}>
+              <FaTimes />
+            </button>
+          </li>
+
           <li>
             <Link
               to="nossa-historia"
               smooth={true}
               duration={500}
-              onClick={toggleMenu}
+              onClick={closeMenu}
             >
               <FaSchool className="header-icon" /> Nossa Escola
             </Link>
@@ -97,7 +83,7 @@ const Header = () => {
               to="por-que-escolher"
               smooth={true}
               duration={500}
-              onClick={toggleMenu}
+              onClick={closeMenu}
             >
               <FaBook className="header-icon" /> Pedagógico
             </Link>
@@ -107,18 +93,13 @@ const Header = () => {
               to="proposta-valor"
               smooth={true}
               duration={500}
-              onClick={toggleMenu}
+              onClick={closeMenu}
             >
               <FaHandHoldingHeart className="header-icon" /> Proposta de Valor
             </Link>
           </li>
           <li>
-            <Link
-              to="blog"
-              smooth={true}
-              duration={500}
-              onClick={toggleMenu}
-            >
+            <Link to="blog" smooth={true} duration={500} onClick={closeMenu}>
               <FaBlog className="header-icon" /> Blog
             </Link>
           </li>
@@ -127,7 +108,7 @@ const Header = () => {
               to="matriculas"
               smooth={true}
               duration={500}
-              onClick={toggleMenu}
+              onClick={closeMenu}
             >
               <FaCalendarCheck className="header-icon" /> Agenda uma Visita
             </Link>

@@ -7,7 +7,7 @@ const PorQueEscolher = () => {
       <div className="content">
         {/* Coluna do Texto */}
         <div className="text-column">
-          <h2 className="section-title">Por que Escolher a Vitória Kids?</h2>
+          <h2 className="section-title">Por que Escolher <tr></tr>Vitória Kids?</h2>
           <p className="section-description">
             Na Vitória Kids, unimos <strong>excelência acadêmica</strong>,{" "}
             <strong>ensino bilíngue</strong> e foco no{" "}
@@ -16,14 +16,15 @@ const PorQueEscolher = () => {
             desafios do futuro.
           </p>
           <p className="section-highlight">
-            Uma escola que une <em>inovação, valores cristãos e acolhimento</em>.
+            Uma escola que une <em>inovação, valores cristãos e acolhimento</em>
+            .
           </p>
         </div>
 
         {/* Coluna do Vídeo */}
         <div className="video-column">
           <iframe
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ" /* Link do vídeo */
+            src="https://www.youtube.com/embed/68C0yB4HceI" /* Formato embed */
             title="Depoimentos Vitória Kids"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen

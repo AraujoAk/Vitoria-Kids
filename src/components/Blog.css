@@ -146,8 +146,84 @@
   
   /* Responsividade */
   @media (max-width: 768px) {
+    /* Seção Blog */
+    .blog-section {
+      padding: 40px 15px; /* Reduz o padding geral */
+    }
+  
+    /* Título */
+    .blog-title {
+      font-size: 2rem; /* Reduz o tamanho do título */
+    }
+  
+    .blog-subtitle {
+      font-size: 0.9rem; /* Reduz o tamanho do subtítulo */
+      animation: none; /* Remove a animação de digitação em telas pequenas */
+      white-space: normal; /* Permite quebra de linha */
+      overflow: visible; /* Ajusta para exibir todo o texto */
+    }
+  
+    /* Lista de Posts */
     .blog-posts {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr; /* Ajusta para uma única coluna */
+      gap: 15px; /* Reduz o espaçamento entre os posts */
+    }
+  
+    .blog-post {
+      border-radius: 8px; /* Suaviza as bordas */
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); /* Menor sombra */
+    }
+  
+    .blog-post-image {
+      height: 180px; /* Reduz a altura das imagens */
+    }
+  
+    .blog-post-content {
+      padding: 10px; /* Reduz o padding interno */
+    }
+  
+    .blog-post-title {
+      font-size: 1rem; /* Reduz o tamanho do título dos posts */
+    }
+  
+    .blog-post-description {
+      font-size: 0.8rem; /* Reduz o tamanho da descrição */
+    }
+  
+    .blog-post-date {
+      font-size: 0.7rem; /* Reduz o tamanho da data */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* Ajustes adicionais para telas muito pequenas */
+    .blog-title {
+      font-size: 1.8rem; /* Reduz ainda mais o tamanho do título */
+    }
+  
+    .blog-subtitle {
+      font-size: 0.8rem; /* Reduz o tamanho do subtítulo */
+    }
+  
+    .blog-post {
+      border-radius: 6px; /* Reduz o arredondamento das bordas */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); /* Ajusta a sombra */
+    }
+  
+    .blog-post-image {
+      height: 150px; /* Reduz ainda mais a altura das imagens */
+    }
+  
+    .blog-post-title {
+      font-size: 0.9rem; /* Reduz o tamanho do título dos posts */
+    }
+  
+    .blog-post-description {
+      font-size: 0.75rem; /* Reduz o tamanho da descrição */
+    }
+  
+    .blog-post-date {
+      font-size: 0.65rem; /* Reduz o tamanho da data */
     }
   }
   

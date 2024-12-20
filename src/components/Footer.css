@@ -1,69 +1,177 @@
 /* Footer Principal */
 .footer {
-    background: #1a237e; /* Azul profundo */
-    color: #ffffff;
-    padding: 40px 20px 20px;
-    font-family: "Poppins", sans-serif;
-  }
-  
+  background: #1a237e; /* Azul profundo */
+  color: #ffffff;
+  padding: 40px 20px 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Colunas */
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-column h4 {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  color: #ffc107; /* Amarelo destaque */
+}
+
+.footer-column ul {
+  list-style: none; /* Remove as bolinhas */
+  padding: 0; /* Remove padding padrão */
+  margin: 0; /* Remove margem padrão */
+}
+
+.footer-column ul li {
+  margin-bottom: 10px; /* Espaçamento entre os itens */
+  display: flex; /* Usa flex para alinhar corretamente */
+  align-items: center; /* Alinha verticalmente */
+}
+
+.footer-column ul li::before {
+  content: ""; /* Substitui as bolinhas */
+  display: inline-block;
+  width: 6px; /* Largura da "bolinha" */
+  height: 6px; /* Altura da "bolinha" */
+  margin-right: 8px; /* Espaço entre a bolinha e o texto */
+  background-color: #ffc107; /* Cor amarela */
+  border-radius: 50%; /* Torna a "bolinha" circular */
+}
+
+.footer-column p,
+.footer-column a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.footer-column a:hover {
+  color: #ffc107; /* Efeito hover amarelo */
+}
+
+.footer-icon {
+  margin-right: 8px;
+  color: #ffc107;
+}
+
+/* Redes Sociais */
+.footer-socials {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon {
+  font-size: 1.5rem;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #ffc107;
+}
+
+/* Texto inferior */
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 0.9rem;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
   .footer-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
+      flex-wrap: wrap;
+      gap: 15px;
   }
-  
-  /* Colunas */
+
   .footer-column {
-    flex: 1;
-    min-width: 200px;
+      min-width: 180px; /* Colunas menores */
   }
-  
+
   .footer-column h4 {
-    margin-bottom: 15px;
-    font-size: 1.2rem;
-    color: #ffc107; /* Amarelo destaque */
+      font-size: 1.1rem; /* Título um pouco menor */
   }
-  
+
   .footer-column p,
   .footer-column a {
-    color: #ffffff;
-    text-decoration: none;
-    margin-bottom: 10px;
-    font-size: 0.95rem;
+      font-size: 0.9rem; /* Texto reduzido */
   }
-  
-  .footer-column a:hover {
-    color: #ffc107; /* Efeito hover amarelo */
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+      flex-direction: column;
+      align-items: center; /* Centraliza colunas */
   }
-  
-  .footer-icon {
-    margin-right: 8px;
-    color: #ffc107;
+
+  .footer-column {
+      flex: none;
+      width: 100%; /* Colunas ocupam toda a largura */
+      text-align: center; /* Centraliza o texto */
   }
-  
-  /* Redes Sociais */
+
+  .footer-column ul li {
+      justify-content: center; /* Centraliza itens no mobile */
+  }
+
   .footer-socials {
-    display: flex;
-    gap: 15px;
+      justify-content: center; /* Redes sociais centralizadas */
   }
-  
-  .social-icon {
-    font-size: 1.5rem;
-    color: #ffffff;
-    transition: color 0.3s ease;
+
+  .footer-column h4 {
+      font-size: 1rem; /* Reduz título */
   }
-  
-  .social-icon:hover {
-    color: #ffc107;
+
+  .footer-column p,
+  .footer-column a {
+      font-size: 0.85rem; /* Reduz texto */
   }
-  
-  /* Texto inferior */
+
   .footer-bottom {
-    text-align: center;
-    margin-top: 20px;
-    padding-top: 10px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    font-size: 0.9rem;
+      font-size: 0.85rem; /* Texto inferior menor */
   }
-  
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+      gap: 10px; /* Reduz espaço entre elementos */
+  }
+
+  .footer-column h4 {
+      font-size: 0.95rem; /* Título ainda menor */
+  }
+
+  .footer-column p,
+  .footer-column a {
+      font-size: 0.8rem; /* Texto mais compacto */
+  }
+
+  .footer-column ul li a {
+      text-decoration: none; /* Remove sublinhado */
+      color: #ffffff; /* Cor branca */
+      font-size: 0.9rem; /* Ajusta o tamanho da fonte */
+  }
+
+  .footer-column ul li a:hover {
+      color: #ffc107; /* Cor amarela no hover */
+  }
+
+  .footer-socials {
+      gap: 10px; /* Menor espaço entre ícones */
+  }
+
+  .footer-bottom {
+      font-size: 0.8rem; /* Texto inferior ajustado */
+  }
+}

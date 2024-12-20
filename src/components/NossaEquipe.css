@@ -103,47 +103,110 @@
   
 /* Ajustando para telas menores */
 @media (max-width: 1024px) {
+  .nossa-equipe-section {
+    padding: 30px 15px; /* Reduz o padding geral */
+  }
+
+  .nossa-equipe-title {
+    font-size: 2.5rem; /* Reduz o tamanho do título */
+    letter-spacing: 1.5px; /* Ajusta o espaçamento entre letras */
+    margin-bottom: 30px;
+  }
+
+  .nossa-equipe-title::after {
+    width: 60px; /* Reduz a largura da linha decorativa */
+    height: 4px;
+  }
+
   .nossa-equipe-swiper {
-    width: 100%;
+    width: 95%; /* Ajusta a largura do swiper */
   }
 
   .team-card {
-    padding: 15px;
+    padding: 15px; /* Ajusta o padding interno */
   }
 
   .team-image {
     width: 90px;
-    height: 90px;
+    height: 90px; /* Reduz o tamanho da imagem */
   }
 
   .team-name {
-    font-size: 1.1rem;
+    font-size: 1rem; /* Reduz o tamanho da fonte do nome */
   }
 
   .team-role {
-    font-size: 0.9rem;
+    font-size: 0.85rem; /* Reduz o tamanho da fonte do cargo */
   }
 }
 
 @media (max-width: 768px) {
+  .nossa-equipe-section {
+    padding: 20px 10px; /* Ajusta o padding geral */
+  }
+
+  .nossa-equipe-title {
+    font-size: 2rem; /* Reduz ainda mais o tamanho do título */
+    margin-bottom: 20px;
+  }
+
+  .nossa-equipe-title::after {
+    width: 50px; /* Reduz ainda mais a largura da linha decorativa */
+  }
+
+  .nossa-equipe-swiper {
+    width: 100%; /* Ocupa toda a largura */
+  }
+
+  .team-card {
+    padding: 10px; /* Reduz o padding interno */
+  }
+
+  .team-image {
+    width: 80px;
+    height: 80px; /* Ajusta o tamanho da imagem */
+  }
+
+  .team-name {
+    font-size: 0.9rem; /* Ajusta o tamanho do nome */
+  }
+
+  .team-role {
+    font-size: 0.8rem; /* Ajusta o tamanho do cargo */
+  }
+}
+
+@media (max-width: 480px) {
+  .nossa-equipe-section {
+    padding: 15px 5px; /* Ajusta o padding para telas muito pequenas */
+  }
+
+  .nossa-equipe-title {
+    font-size: 1.8rem; /* Reduz o tamanho do título */
+  }
+
+  .nossa-equipe-title::after {
+    width: 40px; /* Linha decorativa ainda menor */
+  }
+
   .nossa-equipe-swiper {
     width: 100%;
   }
 
   .team-card {
-    padding: 10px;
+    padding: 8px; /* Ajusta o padding interno */
   }
 
   .team-image {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px; /* Tamanho menor para imagens */
   }
 
   .team-name {
-    font-size: 1rem;
+    font-size: 0.85rem; /* Fonte menor para o nome */
   }
 
   .team-role {
-    font-size: 0.8rem;
+    font-size: 0.75rem; /* Fonte menor para o cargo */
   }
 }

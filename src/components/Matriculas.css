@@ -171,4 +171,27 @@
   .whatsapp-button {
     justify-content: center;
   }
+
+  .matriculas-section {
+    text-align: center; /* Centraliza o texto */
+    padding: 20px; /* Ajusta o espaçamento interno */
+  }
+
+  .matriculas-section h2 {
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 20px; /* Espaço inferior entre o título e o texto */
+  }
+
+  .matriculas-section p {
+    margin-bottom: 15px; /* Ajusta o espaçamento inferior */
+  }
+
+  .matriculas-section .whatsapp-button {
+    margin: 20px auto; /* Centraliza o botão */
+  }
+
+  .matriculas-section form {
+    margin: 0 auto; /* Centraliza o formulário */
+  }
+  
 }

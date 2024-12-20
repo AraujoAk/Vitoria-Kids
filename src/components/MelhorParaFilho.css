@@ -90,12 +90,64 @@
   
   /* Responsividade */
   @media (max-width: 768px) {
+    /* Seção Principal */
+    .melhor-filho-section {
+      padding: 60px 15px; /* Reduz o padding geral */
+    }
+  
+    /* Container */
+    .melhor-filho-container {
+      max-width: 100%; /* Ajusta para ocupar toda a largura da tela */
+      padding: 0 10px; /* Adiciona espaçamento interno */
+    }
+  
+    /* Título */
+    .melhor-filho-title {
+      font-size: 2.4rem; /* Reduz o tamanho do título */
+      margin-bottom: 15px; /* Reduz o espaçamento inferior */
+    }
+  
+    /* Texto */
+    .melhor-filho-text {
+      font-size: 1rem; /* Reduz o tamanho do texto */
+      margin-bottom: 30px; /* Ajusta o espaçamento inferior */
+    }
+  
+    /* Destaques Interativos */
     .melhor-filho-highlights {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr; /* Ajusta para uma única coluna */
+      gap: 15px; /* Reduz o espaçamento entre os itens */
+    }
+  
+    .highlight-card {
+      padding: 15px; /* Reduz o padding interno */
+      font-size: 1rem; /* Ajusta o tamanho da fonte */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* Ajustes adicionais para telas muito pequenas */
+    .melhor-filho-section {
+      padding: 50px 10px; /* Reduz ainda mais o padding geral */
     }
   
     .melhor-filho-title {
-      font-size: 2.2rem;
+      font-size: 2rem; /* Reduz ainda mais o tamanho do título */
+    }
+  
+    .melhor-filho-text {
+      font-size: 0.9rem; /* Ajusta o tamanho do texto */
+      margin-bottom: 20px; /* Reduz o espaçamento inferior */
+    }
+  
+    .highlight-card {
+      padding: 10px; /* Reduz o padding interno */
+      font-size: 0.9rem; /* Ajusta o tamanho da fonte */
+      border-radius: 8px; /* Ajusta o arredondamento das bordas */
+    }
+  
+    .melhor-filho-highlights {
+      gap: 10px; /* Reduz o espaçamento entre os itens */
     }
   }
   

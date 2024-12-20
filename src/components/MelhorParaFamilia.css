@@ -71,4 +71,71 @@
     transform: translateY(-5px); /* Elevação leve */
     opacity: 0.9;
   }
+
+  @media (max-width: 768px) {
+    /* Seção Principal */
+    .melhor-familia-section {
+      padding: 60px 15px; /* Reduz o padding geral */
+    }
+  
+    /* Container */
+    .melhor-familia-container {
+      max-width: 100%; /* Ajusta para ocupar toda a largura da tela */
+      padding: 10px; /* Reduz o espaçamento interno */
+    }
+  
+    /* Título */
+    .melhor-familia-title {
+      font-size: 2.4rem; /* Reduz o tamanho do título */
+      margin-bottom: 15px; /* Ajusta o espaçamento inferior */
+    }
+  
+    /* Parágrafo */
+    .melhor-familia-text {
+      font-size: 1rem; /* Reduz o tamanho do texto */
+      line-height: 1.4; /* Ajusta o espaçamento entre linhas */
+      margin-bottom: 15px; /* Reduz o espaçamento inferior */
+    }
+  
+    /* Elementos Decorativos */
+    .melhor-familia-section::before,
+    .melhor-familia-section::after {
+      width: 120%; /* Reduz a largura das linhas diagonais */
+      height: 70px; /* Ajusta a altura das linhas diagonais */
+    }
+  
+    .melhor-familia-section::before {
+      top: 25%; /* Ajusta a posição */
+      left: -15%; /* Reposiciona para melhor visibilidade */
+    }
+  
+    .melhor-familia-section::after {
+      top: 65%; /* Ajusta a posição */
+      left: -15%; /* Reposiciona para melhor visibilidade */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* Ajustes adicionais para telas muito pequenas */
+    .melhor-familia-section {
+      padding: 50px 10px; /* Reduz ainda mais o padding geral */
+    }
+  
+    .melhor-familia-title {
+      font-size: 2rem; /* Reduz ainda mais o tamanho do título */
+    }
+  
+    .melhor-familia-text {
+      font-size: 0.9rem; /* Ajusta o tamanho do texto */
+      line-height: 1.3; /* Reduz o espaçamento entre linhas */
+      margin-bottom: 10px; /* Ajusta o espaçamento inferior */
+    }
+  
+    /* Elementos Decorativos */
+    .melhor-familia-section::before,
+    .melhor-familia-section::after {
+      width: 110%; /* Reduz ainda mais a largura das linhas diagonais */
+      height: 50px; /* Ajusta a altura das linhas diagonais */
+    }
+  }
   

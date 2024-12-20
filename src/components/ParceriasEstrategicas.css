@@ -135,20 +135,85 @@
 
 /* Responsividade */
 @media (max-width: 768px) {
-  .parcerias-estrategicas-grid {
-    gap: 15px;
+  /* Seção Principal */
+  .parcerias-estrategicas-section {
+    padding: 40px 15px; /* Reduz o padding geral */
+    background: linear-gradient(135deg, #f4f4f4 70%, rgba(255, 193, 7, 0.2) 30%);
   }
 
+  /* Elementos decorativos */
+  .parcerias-estrategicas-section::before {
+    width: 200px; /* Reduz o tamanho do círculo superior */
+    height: 200px;
+    top: -50px; /* Ajusta a posição */
+    left: -100px;
+  }
+
+  .parcerias-estrategicas-section::after {
+    width: 250px; /* Reduz o tamanho do círculo inferior */
+    height: 250px;
+    bottom: -100px;
+    right: -150px;
+  }
+
+  /* Título e Subtítulo */
+  .parcerias-titulo {
+    font-size: 2rem; /* Reduz o tamanho do título */
+    margin-bottom: 10px;
+    letter-spacing: 1px; /* Reduz o espaçamento das letras */
+  }
+
+  .parcerias-subtitulo {
+    font-size: 1rem; /* Reduz o tamanho do subtítulo */
+    line-height: 1.5;
+  }
+
+  /* Grid Principal */
+  .parcerias-estrategicas-grid {
+    gap: 10px; /* Reduz o espaçamento entre os itens */
+  }
+
+  /* Item de Parceria */
   .parceria-item {
-    width: 150px;
-    padding: 15px;
+    width: 130px; /* Reduz a largura dos itens */
+    padding: 10px;
+    border-radius: 10px; /* Suaviza as bordas */
   }
 
   .parceria-logo-container {
-    height: 80px;
+    height: 70px; /* Ajusta a altura do container da logo */
+  }
+
+  .parceria-logo {
+    max-width: 90%; /* Ajusta o tamanho máximo da logo */
   }
 
   .parceria-nome {
-    font-size: 1rem;
+    font-size: 0.9rem; /* Reduz o tamanho do texto */
+    line-height: 1.2; /* Ajusta o espaçamento entre linhas */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Ajustes adicionais para telas muito pequenas */
+  .parcerias-titulo {
+    font-size: 1.8rem; /* Reduz ainda mais o tamanho do título */
+  }
+
+  .parcerias-subtitulo {
+    font-size: 0.9rem; /* Reduz o subtítulo */
+  }
+
+  .parceria-item {
+    width: 110px; /* Reduz a largura dos itens */
+    padding: 8px;
+  }
+
+  .parceria-logo-container {
+    height: 60px; /* Ajusta a altura do container da logo */
+  }
+
+  .parceria-nome {
+    font-size: 0.8rem; /* Reduz o tamanho do texto */
   }
 }

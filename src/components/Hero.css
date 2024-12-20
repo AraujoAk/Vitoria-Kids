@@ -4,6 +4,8 @@
     background-color: #f4f4f4; /* Fundo claro */
     position: relative;
     text-align: center;
+    margin: 0;
+    padding: 0;
   }
   
   /* Swiper Container */

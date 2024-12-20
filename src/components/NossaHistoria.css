@@ -141,23 +141,66 @@
     opacity: 0.7; /* Suaviza a frente ao puxar */
   }
   
-  /* Responsividade */
-  @media (max-width: 768px) {
-    .nossa-historia-title {
-      font-size: 2rem; /* Reduz o tamanho do título */
-      letter-spacing: 1px;
-    }
-  
-    .nossa-historia-title::after {
-      width: 60px; /* Linha menor */
-    }
-  
-    .nossa-historia-title:hover::after {
-      width: 80px; /* Crescimento mais sutil */
-    }
-  
-    .nossa-historia-block {
-      width: 100%; /* Blocos ocupam 100% da largura */
-      height: 300px; /* Reduz a altura */
-    }
-  }  
+/* Responsividade */
+@media (max-width: 1024px) {
+  .nossa-historia-title {
+    font-size: 2.2rem; /* Reduz o tamanho do título */
+    letter-spacing: 1.5px; /* Menor espaçamento entre letras */
+  }
+
+  .nossa-historia-block {
+    width: 260px; /* Ajusta a largura dos blocos */
+    height: 350px; /* Reduz a altura */
+  }
+}
+
+@media (max-width: 768px) {
+  .nossa-historia-title {
+    font-size: 2rem; /* Título menor */
+    letter-spacing: 1px; /* Reduz o espaçamento */
+  }
+
+  .nossa-historia-title::after {
+    width: 60px; /* Linha menor */
+  }
+
+  .nossa-historia-title:hover::after {
+    width: 80px; /* Expansão mais contida no hover */
+  }
+
+  .nossa-historia-block {
+    width: 100%; /* Blocos ocupam toda a largura disponível */
+    height: 300px; /* Altura reduzida */
+  }
+
+  .block-title {
+    font-size: 1rem; /* Texto menor no título do bloco */
+    padding: 6px 10px; /* Reduz o espaçamento interno */
+  }
+
+  .block-back {
+    font-size: 0.9rem; /* Texto menor no verso */
+    padding: 15px; /* Espaçamento interno menor */
+  }
+}
+
+@media (max-width: 480px) {
+  .nossa-historia-title {
+    font-size: 1.8rem; /* Título ainda menor */
+    letter-spacing: 0.8px; /* Espaçamento reduzido */
+  }
+
+  .nossa-historia-block {
+    height: 250px; /* Altura ajustada para telas menores */
+  }
+
+  .block-title {
+    font-size: 0.9rem; /* Texto mais compacto no título do bloco */
+    padding: 5px 8px; /* Reduzido para telas muito pequenas */
+  }
+
+  .block-back {
+    font-size: 0.8rem; /* Texto menor no verso */
+    padding: 10px; /* Ajuste no espaçamento interno */
+  }
+}

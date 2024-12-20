@@ -132,17 +132,63 @@
   }
   
   /* Responsividade */
-  @media (max-width: 768px) {
-    .content {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .text-column {
-      text-align: center;
-    }
-  
-    .video-frame {
-      height: 200px;
-    }
-  }  
+/* Responsividade */
+@media (max-width: 1024px) {
+  .content {
+    gap: 20px; /* Reduz o espaço entre as colunas */
+  }
+
+  .video-frame {
+    max-width: 480px; /* Ajusta o tamanho do vídeo */
+    height: 270px; /* Proporção ajustada */
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column; /* Empilha as colunas */
+    text-align: center; /* Centraliza o texto */
+  }
+
+  .text-column {
+    text-align: center; /* Centraliza a coluna de texto */
+    margin-bottom: 20px; /* Espaço entre texto e vídeo */
+  }
+
+  .section-title {
+    font-size: 2rem; /* Reduz o tamanho do título */
+  }
+
+  .section-description {
+    font-size: 1rem; /* Texto menor */
+  }
+
+  .section-highlight {
+    font-size: 1.1rem; /* Ajusta o tamanho do destaque */
+  }
+
+  .video-frame {
+    width: 100%;
+    max-width: 320px; /* Ajusta o vídeo para telas menores */
+    height: 180px; /* Proporção reduzida */
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    padding: 20px; /* Reduz o padding geral */
+  }
+
+  .section-title {
+    font-size: 1.8rem; /* Título ainda menor */
+  }
+
+  .section-description {
+    font-size: 0.9rem; /* Reduz o tamanho do texto */
+  }
+
+  .video-frame {
+    max-width: 280px; /* Reduz o tamanho do vídeo */
+    height: 160px; /* Proporção ajustada */
+  }
+}
