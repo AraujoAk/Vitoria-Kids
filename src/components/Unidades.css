@@ -56,13 +56,14 @@
   /* Título */
   .unidades-title {
     font-size: 3.5rem;
+    line-height: 2.5rem;
     font-weight: 700;
     color: #d32f2f; /* Vermelho principal */
     margin-bottom: 40px;
     position: relative;
     z-index: 1;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.2px;
     animation: slideIn 1s ease-in-out;
   }
   

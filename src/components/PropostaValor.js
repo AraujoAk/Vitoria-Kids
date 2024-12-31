@@ -8,7 +8,7 @@ const PropostaValor = () => {
         {/* Imagem que ocupa altura total */}
         <div className="proposta-valor-imagem">
           <img
-            src="https://img.freepik.com/fotos-gratis/mulher-de-meio-tiro-mostrando-grafico_23-2148751512.jpg?t=st=1734621328~exp=1734624928~hmac=db04b07da208d52204f05f41e269196c02d26cdd4e922c7b512e7eee9433a114&w=900"
+            src="https://img.freepik.com/fotos-gratis/sonhador-menina-mentiras-madeira-chao-segurando-dela-queixo_1304-3307.jpg?t=st=1735598524~exp=1735602124~hmac=be7e06054cac27975934760f2901124aa34628d67e9c9016718e6390c57cbc05&w=360"
             alt="Proposta de Valor"
           />
         </div>

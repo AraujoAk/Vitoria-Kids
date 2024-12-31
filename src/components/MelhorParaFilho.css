@@ -16,6 +16,7 @@
   
   /* Título */
   .melhor-filho-title {
+    line-height: 2.5rem;
     font-size: 3rem;
     font-weight: bold;
     color: #1976d2; /* Azul principal */

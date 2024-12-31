@@ -1,20 +1,23 @@
 import React from "react";
 import "./NossaHistoria.css";
+import image13 from './pic/13.png';
+import image14 from './pic/14.png';
+import image15 from './pic/15.png';
 
 const NossaHistoria = () => {
   const blocks = [
     {
-      image: "https://media.istockphoto.com/id/949118068/pt/foto/books.jpg?s=1024x1024&w=is&k=20&c=CNgQGzz9dVBfUivObKcw2MqJffLJ251zgpeyf2f-F5o=",
+      image: image13,
       title: "Nossa História",
       text: "A Vitória Kids nasceu do desejo de oferecer uma educação que vai além da sala de aula.",
     },
     {
-      image: "https://img.freepik.com/fotos-gratis/quebra-cabeca-branca_144627-12510.jpg?t=st=1734354270~exp=1734357870~hmac=44e6d9ed3902c830d135a90b22d3081194c6e32f5c6d095b25c1bd0d2f27c9f3&w=900",
+      image: image14,
       title: "Missão, Visão e Valores",
-      text: "Missão: Consolidar um ensino personalizado e valores cristãos para um futuro promissor.",
+      text: "Consolidar um ensino personalizado e valores cristãos para um futuro promissor.",
     },
     {
-      image: "https://img.freepik.com/fotos-premium/mao-tocando-graficos-de-indicador-financeiro-e-grafico-de-mercado-contabil_158104-1376.jpg?w=1060",
+      image: image15,
       title: "Propósito",
       text: "Nosso propósito é transformar vidas por meio do aprendizado integral e valores sólidos.",
     },
@@ -22,21 +25,18 @@ const NossaHistoria = () => {
 
   return (
     <section className="nossa-historia" id="nossa-historia">
+      {/* Título geral da seção */}
       <h2 className="nossa-historia-title">Uma História de Amor</h2>
-      <div className="nossa-historia-blocks">
+      
+      <div className="nossa-historia-container">
         {blocks.map((block, index) => (
-          <div key={index} className="nossa-historia-block">
-            <div className="block-content">
-              {/* Frente */}
-              <div className="block-front">
-                <img src={block.image} alt={block.title} className="block-image" />
-                <h3 className="block-title">{block.title}</h3>
-              </div>
-
-              {/* Verso com conteúdo */}
-              <div className="block-back">
-                <p className="block-text">{block.text}</p>
-              </div>
+          <div key={index} className="nossa-historia-card">
+            <h3>{block.title}</h3>
+            <div className="nossa-historia-image-container">
+              <img src={block.image} alt={block.title} className="nossa-historia-image" />
+            </div>
+            <div className="nossa-historia-hover-content">
+              <p className="nossa-historia-text">{block.text}</p>
             </div>
           </div>
         ))}

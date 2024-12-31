@@ -1,206 +1,171 @@
 /* Seção principal */
 .nossa-historia {
-    padding: 50px 20px;
-    background-color: #f9f9f9;
-    text-align: center;
-  }
-  
-  /* Estilização do título principal */
-  .nossa-historia-title {
-    font-size: 2.5rem; /* Tamanho maior */
-    font-weight: bold;
-    color: #1976d2; /* Azul principal */
-    text-transform: uppercase; /* Letras maiúsculas */
-    letter-spacing: 2px; /* Espaçamento entre letras */
-    margin-bottom: 40px;
-    position: relative;
-    display: inline-block;
-    padding-bottom: 10px;
-    animation: fadeIn 1s ease-in-out; /* Animação de entrada */
-  }
-  
-  /* Adiciona um detalhe (linha) abaixo do título */
-  .nossa-historia-title::after {
-    content: "";
-    position: absolute;
-    width: 80px; /* Largura da linha */
-    height: 4px; /* Altura da linha */
-    background-color: #d32f2f; /* Vermelho */
-    bottom: 0; /* Posição da linha */
-    left: 50%;
-    transform: translateX(-50%); /* Centraliza a linha */
-    border-radius: 2px;
-    transition: width 0.4s ease; /* Suaviza o crescimento */
-  }
-  
-  /* Efeito hover no título */
-  .nossa-historia-title:hover::after {
-    width: 120px; /* A linha aumenta no hover */
-    background-color: #ffc107; /* Amarelo */
-  }
-  
-  /* Animação fade-in */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* Blocos da seção */
-  .nossa-historia-blocks {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  
-  .nossa-historia-block {
-    width: 300px;
-    height: 400px;
-    position: relative;
-    perspective: 1500px; /* Profundidade 3D */
-    border-radius: 8px;
-  }
-  
-  .block-content {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.6s ease-in-out;
-  }
-  
-  /* Frente do bloco */
-  .block-front {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #ffffff;
-    transition: transform 0.6s ease-out;
-    transform-origin: bottom right;
-  }
-  
-  .block-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .block-title {
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-    color: #ffffff; /* Texto branco */
-    background: rgba(0, 0, 0, 0.6); /* Fundo preto com transparência */
-    padding: 8px 12px; /* Espaçamento */
-    font-size: 1.3rem; /* Tamanho maior */
-    font-weight: bold; /* Texto em negrito */
-    border-radius: 5px; /* Bordas suaves */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Sombra no texto para contraste */
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-  
-  /* Verso do bloco com conteúdo */
-  .block-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #d32f2f; /* Fundo vermelho */
-    color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    font-size: 1rem;
-    line-height: 1.4;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-
-  .nossa-historia-block:hover .block-title {
-    background-color: #d32f2f; /* Fundo vermelho no hover */
-    color: #ffc107; /* Texto amarelo no hover */
-    transform: translateY(-5px); /* Leve elevação */
-  }
-  
-  .nossa-historia-block:hover .block-front {
-    transform: rotateX(-10deg) rotateY(-10deg); /* Puxa o canto inferior */
-  }
-  
-  .nossa-historia-block:hover .block-back {
-    opacity: 1; /* Exibe o verso */
-  }
-  
-  .nossa-historia-block:hover .block-front {
-    opacity: 0.7; /* Suaviza a frente ao puxar */
-  }
-  
-/* Responsividade */
-@media (max-width: 1024px) {
-  .nossa-historia-title {
-    font-size: 2.2rem; /* Reduz o tamanho do título */
-    letter-spacing: 1.5px; /* Menor espaçamento entre letras */
-  }
-
-  .nossa-historia-block {
-    width: 260px; /* Ajusta a largura dos blocos */
-    height: 350px; /* Reduz a altura */
-  }
+  background-color: #ffffff; /* Fundo branco */
+  padding: 50px 20px;
+  text-align: center;
 }
 
+/* Título geral da seção */
+.nossa-historia-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #003366; /* Azul da paleta */
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.nossa-historia-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: #d32f2f; /* Vermelho */
+  border-radius: 2px;
+}
+
+/* Contêiner dos cartões */
+.nossa-historia-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Cartão individual */
+.nossa-historia-card {
+  background-color: #f9d923; /* Amarelo da paleta */
+  width: 300px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra leve */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative; /* Necessário para o hover content */
+  overflow: hidden; /* Para esconder o conteúdo ao aplicar o hover */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nossa-historia-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Título do cartão desaparecendo no hover */
+.nossa-historia-card:hover h3 {
+  opacity: 0;
+  transition: opacity 0.3s ease; /* Suaviza o desaparecimento */
+}
+
+/* Título do cartão */
+.nossa-historia-card h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #003366; /* Azul da paleta */
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  z-index: 2; /* Garante que o título fique acima do fundo */
+}
+
+/* Container da imagem */
+.nossa-historia-image-container {
+  width: 100%;
+  height: 180px;
+  margin: 15px 0;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #ffffff; /* Fundo branco */
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+.nossa-historia-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  border: -1px solid #ffffff; /* Borda branca */
+  transition: transform 0.3s ease;
+}
+
+.nossa-historia-card:hover .nossa-historia-image {
+  transform: scale(1.1); /* Zoom leve na imagem */
+}
+
+/* Efeito hover no bloco */
+.nossa-historia-hover-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(183, 28, 28, 1.0); /* Fundo vermelho com transparência */
+  color: #ffffff; /* Texto branco */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0; /* Invisível por padrão */
+  transition: opacity 0.3s ease;
+  border-radius: 15px; /* Mantém o mesmo raio do cartão */
+}
+
+.nossa-historia-card:hover .nossa-historia-hover-content {
+  opacity: 1; /* Aparece ao passar o mouse */
+}
+
+/* Responsividade */
 @media (max-width: 768px) {
+  .nossa-historia-card {
+    width: 100%;
+  }
+
   .nossa-historia-title {
-    font-size: 2rem; /* Título menor */
-    letter-spacing: 1px; /* Reduz o espaçamento */
+    font-size: 2rem;
   }
 
-  .nossa-historia-title::after {
-    width: 60px; /* Linha menor */
+  .nossa-historia-card h3 {
+    font-size: 1.3rem;
   }
 
-  .nossa-historia-title:hover::after {
-    width: 80px; /* Expansão mais contida no hover */
+  .nossa-historia-card p {
+    font-size: 0.9rem;
   }
 
-  .nossa-historia-block {
-    width: 100%; /* Blocos ocupam toda a largura disponível */
-    height: 300px; /* Altura reduzida */
-  }
-
-  .block-title {
-    font-size: 1rem; /* Texto menor no título do bloco */
-    padding: 6px 10px; /* Reduz o espaçamento interno */
-  }
-
-  .block-back {
-    font-size: 0.9rem; /* Texto menor no verso */
-    padding: 15px; /* Espaçamento interno menor */
+  .nossa-historia-image-container {
+    height: 150px; /* Ajuste da altura para telas menores */
   }
 }
 
 @media (max-width: 480px) {
+  .nossa-historia-card {
+    width: 100%;
+  }
+
   .nossa-historia-title {
-    font-size: 1.8rem; /* Título ainda menor */
-    letter-spacing: 0.8px; /* Espaçamento reduzido */
+    font-size: 1.8rem;
   }
 
-  .nossa-historia-block {
-    height: 250px; /* Altura ajustada para telas menores */
+  .nossa-historia-card h3 {
+    font-size: 1.2rem;
   }
 
-  .block-title {
-    font-size: 0.9rem; /* Texto mais compacto no título do bloco */
-    padding: 5px 8px; /* Reduzido para telas muito pequenas */
+  .nossa-historia-card p {
+    font-size: 0.85rem;
   }
 
-  .block-back {
-    font-size: 0.8rem; /* Texto menor no verso */
-    padding: 10px; /* Ajuste no espaçamento interno */
+  .nossa-historia-image-container {
+    height: 140px; /* Altura menor para dispositivos muito pequenos */
   }
 }
