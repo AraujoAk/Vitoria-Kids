@@ -6,11 +6,11 @@ import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import "./Hero.css";
 
 // Importação dos vídeos
-import video1 from "./carrosel.mp4";
-import video2 from "./carrossel1.mp4";
-import video3 from "./carrossel2.mp4";
-import video4 from "./carrossel3.mp4";
-import video5 from "./carrossel4.mp4";
+import video1 from "./carrossel1.mp4";
+import video2 from "./carrossel2.mp4";
+import video3 from "./carrossel3.mp4";
+import video4 from "./carrossel4.mp4";
+import video5 from "./carrossel5.mp4";
 
 const Hero = () => {
   const swiperRef = useRef(null);

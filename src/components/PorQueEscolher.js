@@ -1,7 +1,6 @@
 import React from "react";
 import "./PorQueEscolher.css";
-import videoVK from './video-vk.mp4';
-
+import videoVK from './videosessao.mp4';
 
 const PorQueEscolher = () => {
   return (
@@ -30,8 +29,8 @@ const PorQueEscolher = () => {
 
           {/* Vídeo maior com borda estilizada */}
           <div className="porQueEscolher-video animated-video">
-            <video controls>
-            <source src={videoVK} type="video/mp4" />
+            <video controls width="100%" height="auto">
+              <source src={videoVK} type="video/mp4" />
               Seu navegador não suporta vídeos.
             </video>
           </div>
